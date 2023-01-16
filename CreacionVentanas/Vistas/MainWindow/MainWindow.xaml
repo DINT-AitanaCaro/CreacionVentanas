@@ -1,0 +1,19 @@
+﻿<Window x:Class="CreacionVentanas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CreacionVentanas"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+            <Button Margin="5" Command="{Binding Path=UC1Command}">UC1</Button>
+            <Button Margin="5" Command="{Binding Path=UC2Command}">UC2</Button>
+            <Button Margin="5" Command="{Binding Path=CambiarTextoCommand}">Cambiar Texto</Button>
+        </StackPanel>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="5">
+            <ContentControl Content="{Binding Path=ContenidoMostrar}"></ContentControl>
+        </Border>
+    </DockPanel>
+</Window>
